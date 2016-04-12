@@ -25,7 +25,7 @@
             $giave = array_slice(scandir($urlgiave), 2);
             $banner = array_slice(scandir($urlbanner), 2);
 
-            $idChude = isset($_GET['idChude']) && $_GET['idChude'] > 0 && $_GET['idChude'] < 12 ? $_GET['idChude'] : 1;
+            $idChude = isset($_GET['idChude']) && $_GET['idChude'] > 0 && $_GET['idChude'] <= 12 ? $_GET['idChude'] : 1;
 
             $urlhinhchude = './product/hinhchude/' . $idChude . '/';
             $hinhchude = array_slice(scandir($urlhinhchude), 2);
