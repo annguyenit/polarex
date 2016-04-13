@@ -14,12 +14,9 @@
 <body>
 
 <?php 
-$urlgiave='./product/banggiave/';
-$urlbanner='./product/banner/';
 $urlchude='./product/12chude/';
 $urldaily='./product/daily/';
-$giave = array_slice(scandir($urlgiave), 2);
-$banner=array_slice(scandir($urlbanner), 2);
+
 $chude=array_slice(scandir($urlchude), 2);
 $daily=array_slice(scandir($urldaily), 2);
 
@@ -55,6 +52,17 @@ $connect->Connect2DB();
     .slideshow div.lastactive {
         z-index:9;
     }
+    
+    p.flex-caption {
+        display: none;
+        margin-top: -42px;
+        text-align: center;
+        padding: 12px 0;
+        background: #000;
+        color: #fff;
+        opacity: 0.7;
+        z-index: 100;
+    }
 </style>
 
 <script> 
@@ -70,24 +78,14 @@ $(document).ready(function(){
 									
         $("#daily").slideToggle("slow");
     });
-
-    $('.read-more-content').css('display','none');
-    $('.show-less').css('display','none');
-
-    // Set up the toggle.
-    $('.show-more').on('click', function() {
-      $('.read-more-content').css('display','block');
-      $('.show-more').css('display','none');
-      $('.show-less').css('display','block');
-    });
     
-    // Set up the toggle.
-    $('.show-less').on('click', function() {
-      $('.read-more-content').css('display','none');
-      $('.show-more').css('display','block');
-      $('.show-less').css('display','none');
-    });
-
+    $("img").hover(function(){
+        $(this).next().fadeIn();
+        }
+        ,function(){
+            $(this).next().fadeOut();
+        }
+    );
 });
 
     $(function(){
@@ -169,91 +167,14 @@ function subtract(object)
 
 </script>
 	<?php include_once('header.html')?>
-        
-        <div style="position:relative">
-             <div class="slideshow"><?php foreach($banner as $value) {
-																		echo '<div><img src="'.$urlbanner.$value;
-																		$temp=explode('.',$value);
-																		echo '" alt="'.$temp[0].'" border="0" /></div>';
-																	}
-								   ?>
-	        </div>
-        </div>
+	<?php include_once('banner.php')?>
        
         <div style="background-color:#b6cdec; padding-top:5px"> 
+            <?php include_once('chonve.php')?>
+            
+      	
         
-          <div class="menu" style="margin:0px 35px 0px 35px; height:32px"> 
-        		<li>Giá vé <span style="margin-left:5px"><img src="pic/arrow_down.gif" id="show_giave" class="image_click"/></span> </li> 
-                
-                <li>
-                <span>Số vé đặt</span> 
-              	  <span style="background-color:white;  height:40px; margin-left:5px; "> 
-               	  <span style="margin-left:5px"><img class="image_click" src="pic/add.gif" onclick="add(document.getElementById('nguoilon'))" /></span>
-                   <span > <input type="text" id="nguoilon"  name="nguoilon" align="bottom" style="font-size:11px; height:10px; font-weight:bold; text-align:center;width:23px; border:none" value="0"/></span>
-                   <span style="margin-right:5px"><img  class="image_click" src="pic/substract.gif" align="absmiddle" onclick="subtract(document.getElementById('nguoilon'))"/></span>
-                </span>
-                </li>
-                
-             
-                <li>
-                <span><select id="loaive" style="border:none;  background-color:#b6cdec; font-weight:bold"><option>Chọn ngày tham quan</option><option  value="nt">Ngày thường</option><option value="nl">Ngày lễ và chủ nhật</option></select></span> 
-              	                
-                </li>
-                <script type="text/javascript">
-                  function change_datve_img_over(object)
-				  {
-					  object.src='pic/button_dat_ve2.gif';
-				  }
-				  function change_datve_img_out(object)
-				  {
-					  object.src='pic/button_dat_ve.gif';
-				  }
-              function change_page()
-			  {
-					var is_error=0;
-					var loaive = document.getElementById('loaive');
-					
-					if(loaive.selectedIndex!=0)
-				{
-					var form_object = document.createElement('form');
-					var input_object_1 = document.createElement('input');
-					var input_object_2 = document.createElement('input');
-					var input_object_3 = document.createElement('input');
-					var nguoilon = parseInt(document.getElementById('nguoilon').value);
-				   
-					
-					if(nguoilon>0){
-				    					input_object_1.type='text'; input_object_1.value=nguoilon;
-										input_object_1.name='nguoilon';form_object.appendChild(input_object_1);
-					              }
-					else  is_error=1;
-					     
-						
-				
-					
-					if(is_error==0)
-					{
-					input_object_3.type='text';
-							
-					input_object_3.value=loaive.value;
-									
-					input_object_3.name='loaive';
-					
-					 form_object.method='post';
-					 form_object.action='dangky_dangnhap_.php';
-					 
-					
-					 form_object.appendChild(input_object_3);
-					 form_object.submit();
-					}
-				}
-		  }
-                </script>
-                <li><img onclick="change_page();" src="pic/button_dat_ve.gif" align="absbottom" style="cursor:pointer" onmouseover="change_datve_img_over(this)" onmouseout="change_datve_img_out(this)" /></li>
-                
-          </div>
-          <div id="giave" style="display:none"><img src="<?php echo $urlgiave.$giave[0];?>"  alt="bao_cuc_dia_bang_gia_ve"/></div>
-      	<div style="background-color:#9dbde4"> 
+        <div style="background-color:#9dbde4"> 
          <div >
         <table style="border:none" >
             <tr><td valign="top" width="565" ><iframe width="560" height="315" src="https://www.youtube.com/embed/4zqf_LW9OnU" frameborder="0" allowfullscreen></iframe></td>
@@ -265,41 +186,8 @@ function subtract(object)
                     Cùng với tình trạng Trái Đất ấm dần lên và băng đang tan dần ở Nam – Bắc cực, sự kiện này sẽ góp phần nâng cao nhận thức về trách nhiệm bảo vệ môi trường – “sự sống của nhân loại”. Bên cạnh đó với không gian băng tuyết của triển lãm, bạn sẽ có cơ hội nhìn thấy mô hình các loài sinh vật tại 2 vùng cực địa Trái Đất, mô hình nhà băng của người Eskimo, mô hình xe ngựa quả bí pha lê, mô hình hồ cầu nguyện Mỹ Nhân Ngư,…
                 </p>
                 <p>
-                    Khi tham gia chương trình vô cùng hấp dẫn này, các bạn sẽ được mặc áo khoác chống lạnh vàthưởng thức các trò chơi trong phong cảnh tuyệt mỹ nơi cực địa lên đến 1500m2 với nhiệt độ xuống tới - 15oC như:
+                    Khi tham gia chương trình vô cùng hấp dẫn này, các bạn sẽ được mặc áo khoác chống lạnh vàthưởng thức các trò chơi trong phong cảnh tuyệt mỹ nơi cực địa lên đến 1500m2 với nhiệt độ xuống tới - 15oC
                 </p>
-                <a class="show-more" style="cursor: pointer; color: blue;">Đọc thêm >></a>
-                <div class="read-more-content">
-                    <h4>Trượt băng cảm giác mạnh:</h4>
-                    <p>Cùng trèo lên núi băng và khám phá những con đường băng đầy thách thức với cầu tuột băng lên đến 4 làn, bạn sẽ bất ngờ với trò chơi cảm giác mạnh tuyệt vời suốt mùa hè nóng nực.</p>
-
-                    <h4>Mô hình tàu phá băng vùng cực địa: </h4>
-                    <p>Tàu phá băng đượctạo hìnhhoành tráng không kém phần tao nhã, chào đón các bạn cùng thám hiểm Bắc Băng Dương, lưu lại những khoảnh khắc đáng nhớ với gia đình và bạn bè qua những tấm ảnhkỷ niệm thật tuyệt vời.</p>
-
-                    <h4>Xe trượt tuyết tuần lộc:</h4>
-                    <p>Những chú tuần lộc sẽ đưa bạn tham quan những cảnh quan mới lạ đem lại trải nghiệm cực lạnh thú vị trong ánh sáng lấp lánh huyền diệu của những tinh thể mang đậm giá trị nghệ thuật điêu khắc. Điều đặc biệt hơn là bạn sẽ có được những ký ức khó quên chưa từng trải nghiệm trước đây.</p>
-
-                    <h4>Động vật vùng cực địa:</h4>
-                    <p>Nơi hội tụ của những chú gấu trắng Bắc Cực, hải cẩu, chim cách cụt, chim hải âu, cáo tuyết Bắc Cực, sư tử biển…tất cả những binh lính đặc chủng của vùng Cực địa này sẽ được điêu khắc dưới bàn tay điêu luyện của các nghệ nhân tài năng đến từ vùng Cáp Nhĩ Tân, hãy thử xem bạn có nhận ra được họ không nhé.</p>
-
-                    <h4>Hành lang tuyết trắng 3D:</h4>
-                    <p>Với hình ảnh 3D phủ đầy tuyết trắng được trưng bày dọc hành lang đón khách, bạn sẽ kinh ngạc trước những bức tranh 3D núi băng hùng vĩ, ngắm nhìn những chú chim cánh cụt siêu dễ thương “Say Hello!”.</p>
-
-                    <h4>Khu chơi tuyết/ ném tuyết:</h4>
-                    <p>Vui đùa dưới bụi cây, bên cạnh những động vật vùng Bắc Cực được điêu khắc bằng đá tuyết, các bạn còn được hòa mình dưới những <b>“trận mưa tuyết thật sự”</b> cùng bạn bè tự tay nắn người tuyết, “tử chiến” với trò ném tuyết trong không gian lạnh -15°C. Đây chắc chắn sẽ là một trải nghiệm cực kỳ khó quên cho bạn và gia đình.</p>
-
-                    <h4>Khu vui chơi vùng cực:</h4>
-                    <p>Bùng nổ niềm vui cùng các trò chơi thú vị: bể bóng Polar đầy màu sắc, trổ tài ném bóng rổ, phóng phi tiêu… tại vùng bão băng trên nền nhạc sôi động xua tan đi những ngày hè nóng bức.</p>
-
-                    <h4>Cực quang 3D – ánh sáng Bắc Cực:</h4>
-                    <p>Chiêm ngưỡng hiện tượng Bắc cực quang 3D về đêm – “ánh hào quang mỹ lệ”tượng trưng cho sự may mắn và niềm hạnh phúc.</p>
-
-                    <h4>Triển lãm ảnh thám hiểm vùng Cực địa:</h4>
-                    <p>Bộ sưu tập về hình ảnh đến từ nơi lạnh nhất của Trái Đất được thực hiện bởi các nhà thám hiểm. Với mỗi hình ảnh vùng cực địa phong phú và trữ tình đều là những tác phẩm nghệ thuật đặc sắc, khó phai đem đến các bạn cái nhìn cụ thể hơn về nơi khắc nghiệt nhất hành tinh.</p>
-
-                    <h4>Ice Bar – Quầy bar băng giá:</h4>
-                    <p>Bạn sẽ cực kỳ ấn tượng đến kinh ngạc dưới sự hoành tráng của <b>Quán Ice Bar</b> điêu khắc hoàn toàn bằng băngtừ những chiếc bàn, ghế đến cả cái ly bạn uống, <b>Quán Ice Bar</b> được tái bản theo phong cách London, Tokyo tiên tiến và hiện đại. Sẽ không còn gì thú vị hơn khi được thưởng thức những thức uống ấm bụng hay lạnh tê lưỡi và cùng buôn chuyện với gia đình, bạn bè, người thântrong một không gian thật “Bắc Cực”. Bên cạnh đó, trên mỗi vé có phần ưu đãi giảm giá nước uống.</p>
-                </div>
-                <a class="show-less" style="cursor: pointer; color: blue; margin: 10px 0;"><< Thu lại</a>
             </td>
             </tr>
         
@@ -324,7 +212,8 @@ function subtract(object)
                  for ($i = 0; $i < count($arrChuDeKhac); $i=$i+1) {
 
                       echo '<li>';
-                      echo '<a title="'. $arrChuDeKhac[$i]['TEN'] .'" href="/chuyende.php?idChude='. $arrChuDeKhac[$i]['ID'] .'"><img style="margin-bottom:5px;" src="' . $urlchude . $arrChuDeKhac[$i]['HINH_ANH'] . '" alt="' . $arrChuDeKhac[$i]['TEN'] . '" border="0" /></a>';
+                      //echo '<a title="'. $arrChuDeKhac[$i]['TEN'] .'" href="/chuyende.php?idChude='. $arrChuDeKhac[$i]['ID'] .'"><img style="margin-bottom:5px;" src="' . $urlchude . $arrChuDeKhac[$i]['HINH_ANH'] . '" alt="' . $arrChuDeKhac[$i]['TEN'] . '" border="0" /></a>';
+                      echo '<a title="'. $arrChuDeKhac[$i]['TEN'] .'" href="/chuyende.php?idChude='. $arrChuDeKhac[$i]['ID'] .'"><img src="' . $urlchude . $arrChuDeKhac[$i]['HINH_ANH'] . '" alt="' . $arrChuDeKhac[$i]['TEN'] . '" border="0" /><p class="flex-caption">'.$arrChuDeKhac[$i]['TEN'].'</p></a>';
                       echo '</li>';
                   } 
               }
@@ -344,8 +233,6 @@ function subtract(object)
           <div id="daily" style="display:none;background-color:#9dbde4; padding-left:35px; padding-bottom:20px" ><img src="<?php echo $urldaily.$daily[0];?>"  alt="bao_cuc_dia_bang_dai_ly"/></div>
         <div style="background-color:white; padding-top:30px; padding-bottom:30px; position:relative"> 
            <div >  <span style="font-size:20px; font-weight:bold; letter-spacing:2px">&nbsp;&nbsp;  Đơn vị tài trợ</span></div>
-         <div style="position:absolute; top: 243px; left: 176px;"><img src="pic/left_arrow.gif" /></div>
-          <div style="position:absolute; left: 812px; top: 241px;"><img src="pic/right-arrow.gif" /></div>
           <div>
         
           <table align="center"   cellpadding="30"   style=" border-collapse:collapse" >
@@ -355,7 +242,6 @@ function subtract(object)
             <td><img src="pic/Logo/logo_vietopia.png"  width="130" height="130" /></td>
           </tr>
            <tr >
-          <td ><img src="pic/Logo/logo_vietopia.png" width="130" height="130" /></td>
            <td><img src="pic/Logo/vietnam_airlines_logo.png"  width="150" height="100" /></td>
             <td ><img src="pic/Logo/unnamed.jpg" width="130" height="130"  /></td>
           </tr>

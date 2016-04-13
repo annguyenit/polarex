@@ -96,16 +96,18 @@ include_once("inbox_info_user.php");
             	<table cellspacing="0" width="100%"  style="outline:thin #FFF7E6 solid" >
             	  
             	  
-<th width="10%">Họ tên</th>
+<th width="auto">Mã khách hàng</th>
+
+<th width="auto">Họ tên</th>
                     
-                       <th width="8%">Email</th>
+                       <th width="auto">Email</th>
                         
-<th width="14%"> Địa chỉ</th>
+<th width="auto"> Địa chỉ</th>
                          
-                           <th width="11%">Điện thoại</th>
+                           <th width="auto">Điện thoại</th>
 
                            
-                 <td width="2%"></th>
+                 <td width="auto"></th>
                  
                  <?php
 						$connect = new Connection;
@@ -117,11 +119,11 @@ include_once("inbox_info_user.php");
 						
 						echo'<tr style="cursor:pointer"  onmouseover="OverSelectRow(this)" onmouseout="OutSelectRow(this)"    >
 						
-						
-						<td  width="15%"   >'.$row['USER_TEN'].'</td>
-                         <td width="8%" >'.$row['USER_EMAIL'].'</td>
-                      	<td width="8%" >'.$row['DIACHI'].'</td>
-						<td width="8%" >'.$row['DIENTHOAI'].'</td>
+						<td  width="auto"   >'.$row['USER_EMAIL'].'</td>
+						<td  width="auto"   >'.$row['USER_TEN'].'</td>
+                         <td width="auto" >'.$row['EMAIL'].'</td>
+                      	<td width="auto" >'.$row['DIACHI'].'</td>
+						<td width="auto" >'.$row['DIENTHOAI'].'</td>
 						
 										 
                  		</tr>'	;

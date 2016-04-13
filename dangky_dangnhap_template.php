@@ -8,7 +8,7 @@
                 	<td width="235" rowspan="6" align="right" >
                     	<b>Xin vui lòng nhập  Email:</b>
                     </td>
-                	<td width="289" height="35"><input type="text" placeholder="Xin vui lòng nhập Email" id="email" name="acc_info"   disabled="disabled" /></td>
+                    <td width="289" height="35"><input type="text" placeholder="Xin vui lòng nhập Email" id="email" name="acc_info" /></td>
                   </tr>
                   <tr ><td height="24"><input type="radio" name="account"  checked="checked" onclick="dangnhap_(this)" /> 
                   Đặt vé mà không cần đăng ký</td></tr>

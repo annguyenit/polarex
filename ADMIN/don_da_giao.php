@@ -127,7 +127,7 @@ $page=$_GET['page'];
 						<td width="3%" ><img src="image/check.png" name="MSDH" id="'.$row['MSDH'].'" /></td>
 						<td  width="15%"   >'.$row['USER_TEN'].'</td>
                         <td width="9%"  >'.$row['NGAYDATVE'] .'</td>
-					    <td width="8%" >'.$row['USER_EMAIL'].'</td>
+					    <td width="8%" >'.$row['EMAIL'].'</td>
                       	<td width="8%" >'.$row['DIACHI'].'</td>
 						<td width="8%" >'.$row['DIENTHOAI'].'</td>
 						<td width="11%">'.$row['LOAIVE'].'</td>

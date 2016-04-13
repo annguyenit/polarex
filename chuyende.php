@@ -65,6 +65,18 @@
             .slideshow div.lastactive {
                 z-index:9;
             }
+            
+            p.flex-caption {
+                display: none;
+                margin-top: -42px;
+                text-align: center;
+                padding: 12px 0;
+                background: #000;
+                color: #fff;
+                opacity: 0.7;
+                z-index: 100;
+            }
+            
         </style>
 
         <script>
@@ -80,31 +92,27 @@
 
                     $("#daily").slideToggle("slow");
                 });
-
+                
+                $("img").hover(function(){
+                    $(this).next().fadeIn();
+                    }
+                    ,function(){
+                        $(this).next().fadeOut();
+                    }
+                );      
             });
 
             $(function () {
                 SyntaxHighlighter.all();
             });
-//            $(window).load(function () {
-//                $('.flexslider').flexslider({
-//                    animation: "slide",
-//                    animationLoop: true,
-//                    itemWidth: 326,
-//                    smoothHeight: 200,
-//                    itemMargin: 10,
-//                    start: function (slider) {
-//                        $('body').removeClass('loading');
-//                    }
-//                });
-//            });
             $(window).load(function() {
                 
                 $('.flex2').flexslider({
                   animation: "slide",
                   animationLoop: false,
                   itemWidth: 330,
-                  itemMargin: 5
+                  itemMargin: 5,
+                  slideshow: false
                 });
 
               // The slider being synced must be initialized first
@@ -159,8 +167,6 @@
 
         </script>
         <style> 
-
-
             #giave {
                 padding: 50px;
             }
@@ -192,94 +198,10 @@
 
         </script>
         <?php include_once('header.html') ?>
-
-        <div style="position:relative">
-            <div class="slideshow"><?php
-                foreach ($banner as $value) {
-                    echo '<div><img src="' . $urlbanner . $value;
-                    $temp = explode('.', $value);
-                    echo '" alt="' . $temp[0] . '" border="0" /></div>';
-                }
-                ?>
-            </div>
-        </div>
+        <?php include_once('banner.php')?>
 
         <div style="background-color:#b6cdec; padding-top:5px"> 
-
-            <div class="menu" style="margin:0px 35px 0px 35px; height:32px"> 
-                <li>Giá vé <span style="margin-left:5px"><img src="pic/arrow_down.gif" id="show_giave" class="image_click"/></span> </li> 
-
-                <li>
-                    <span>Số vé đặt</span> 
-                    <span style="background-color:white;  height:40px; margin-left:5px; "> 
-                        <span style="margin-left:5px"><img class="image_click" src="pic/add.gif" onclick="add(document.getElementById('nguoilon'))" /></span>
-                        <span > <input type="text" id="nguoilon"  name="nguoilon" align="bottom" style="font-size:11px; height:10px; font-weight:bold; text-align:center;width:23px; border:none" value="0"/></span>
-                        <span style="margin-right:5px"><img  class="image_click" src="pic/substract.gif" align="absmiddle" onclick="subtract(document.getElementById('nguoilon'))"/></span>
-                    </span>
-                </li>
-
-
-                <li>
-                    <span><select id="loaive" style="border:none;  background-color:#b6cdec; font-weight:bold"><option>Chọn ngày tham quan</option><option  value="nt">Ngày thường</option><option value="nl">Ngày lễ và chủ nhật</option></select></span> 
-
-                </li>
-                <script type="text/javascript">
-                    function change_datve_img_over(object)
-                    {
-                        object.src = 'pic/button_dat_ve2.gif';
-                    }
-                    function change_datve_img_out(object)
-                    {
-                        object.src = 'pic/button_dat_ve.gif';
-                    }
-                    function change_page()
-                    {
-                        var is_error = 0;
-                        var loaive = document.getElementById('loaive');
-
-                        if (loaive.selectedIndex != 0)
-                        {
-                            var form_object = document.createElement('form');
-                            var input_object_1 = document.createElement('input');
-                            var input_object_2 = document.createElement('input');
-                            var input_object_3 = document.createElement('input');
-                            var nguoilon = parseInt(document.getElementById('nguoilon').value);
-
-
-                            if (nguoilon > 0) {
-                                input_object_1.type = 'text';
-                                input_object_1.value = nguoilon;
-                                input_object_1.name = 'nguoilon';
-                                form_object.appendChild(input_object_1);
-                            }
-                            else
-                                is_error = 1;
-
-
-
-
-                            if (is_error == 0)
-                            {
-                                input_object_3.type = 'text';
-
-                                input_object_3.value = loaive.value;
-
-                                input_object_3.name = 'loaive';
-
-                                form_object.method = 'post';
-                                form_object.action = 'dangky_dangnhap_.php';
-
-
-                                form_object.appendChild(input_object_3);
-                                form_object.submit();
-                            }
-                        }
-                    }
-                </script>
-                <li><img onclick="change_page();" src="pic/button_dat_ve.gif" align="absbottom" style="cursor:pointer" onmouseover="change_datve_img_over(this)" onmouseout="change_datve_img_out(this)" /></li>
-
-            </div>
-            <div id="giave" style="display:none"><img src="<?php echo $urlgiave . $giave[0]; ?>"  alt="bao_cuc_dia_bang_gia_ve"/></div>
+            <?php include_once('chonve.php')?>
             <div style="background-color:#9dbde4; padding: 20px;">
                 
                 <h3><?php echo isset($chude['TEN']) ? $chude['TEN'] : '' ?></h3>
@@ -336,11 +258,12 @@
                         
                         if(count($arrChuDeKhac)>0)
                         {
-                           for ($i = 0; $i < count($arrChuDeKhac); $i=$i+2) {
+                           for ($i = 0; $i < count($arrChuDeKhac); $i=$i+1) {
                                                                 
                                 echo '<li>';
-                                echo '<a title="'. $arrChuDeKhac[$i]['TEN'] .'" href="/chuyende.php?idChude='. $arrChuDeKhac[$i]['ID'] .'"><img style="margin-bottom:5px;" src="' . $urlchude . $arrChuDeKhac[$i]['HINH_ANH'] . '" alt="' . $arrChuDeKhac[$i]['TEN'] . '" border="0" /></a>';
-                                echo '<a title="'. $arrChuDeKhac[$i+1]['TEN'] .'" href="/chuyende.php?idChude=' . $arrChuDeKhac[$i+1]['ID'] . '"><img src="' . $urlchude . $arrChuDeKhac[$i+1]['HINH_ANH'] . '" alt="' . $arrChuDeKhac[$i+1]['TEN'] . '" border="0" /></a>';
+                                echo '<a title="'. $arrChuDeKhac[$i]['TEN'] .'" href="/chuyende.php?idChude='. $arrChuDeKhac[$i]['ID'] .'"><img src="' . $urlchude . $arrChuDeKhac[$i]['HINH_ANH'] . '" alt="' . $arrChuDeKhac[$i]['TEN'] . '" border="0" /><p class="flex-caption">'.$arrChuDeKhac[$i]['TEN'].'</p></a>';
+                                //echo '<a title="'. $arrChuDeKhac[$i]['TEN'] .'" href="/chuyende.php?idChude='. $arrChuDeKhac[$i]['ID'] .'"><img style="margin-bottom:5px;" src="' . $urlchude . $arrChuDeKhac[$i]['HINH_ANH'] . '" alt="' . $arrChuDeKhac[$i]['TEN'] . '" border="0" /><p class="flex-caption">'.$arrChuDeKhac[$i]['TEN'].'</p></a>';
+                                //echo '<a title="'. $arrChuDeKhac[$i+1]['TEN'] .'" href="/chuyende.php?idChude=' . $arrChuDeKhac[$i+1]['ID'] . '"><img src="' . $urlchude . $arrChuDeKhac[$i+1]['HINH_ANH'] . '" alt="' . $arrChuDeKhac[$i+1]['TEN'] . '" border="0" /><p class="flex-caption">'.$arrChuDeKhac[$i+1]['TEN'].'</p></a>';
                                 echo '</li>';
                             } 
                         }

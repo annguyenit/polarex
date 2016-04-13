@@ -70,9 +70,10 @@ function dangky_dangnhap_thanhtoan()
   <div style="float:right; margin-right:40px; padding-bottom:16px" > 
   <table  style="width:350px; text-indent:10px" cellpadding="0" cellspacing="0" class="thongtin_donhang">
    <tr  ><td height="53"  style=" border-bottom: solid thin #e4e8ea"><b>Địa chỉ giao hàng <span style="color:#65bcce; font-size:11px; cursor:pointer">Chỉnh sửa</span></b></td></tr>
-  <tr><td height="35" style="font-size:14px"><b><span id="tenkhachhangspan"></span></b></td></tr>
-  <tr><td height="24" style="font-size:14px"><span id="diachispan"></span></td></tr>
-  <tr><td style="font-size:14px"><span id="thanhphospan"></span></td></tr>
+  <tr><td height="35" style="font-size:14px">Họ và tên: <b><span id="tenkhachhangspan"></span></b></td></tr>
+  <tr><td height="24" style="font-size:14px">Email: <span id="emailspan"></span></td></tr>
+  <tr><td height="24" style="font-size:14px">Địa chỉ giao hàng: <span id="diachispan"></span></td></tr>
+  <tr><td style="font-size:14px">Thành phố: <span id="thanhphospan"></span></td></tr>
   <tr><td style="font-size:14px" height="23">Điện thoại di động: <span id="dienthoaispan"></span></td></tr>
   <tr><td>&nbsp;</td></tr>
   </table>
