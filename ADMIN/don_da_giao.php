@@ -88,15 +88,18 @@ $page=$_GET['page'];
 }
  ?>
  	   <div style=" position:relative; margin-top:10px; padding-top:35px; padding-left:10px; padding-right:10px; padding-bottom:10px; background-color:#FFF; font-weight:bold; font-size:14px">
-            <div style="position:absolute; top: 5px; width: 176px;">
+            <div style="position:absolute; top: 5px; width: 98%;">
             <a href="don_da_giao.php? page=<?php if($page>1)	echo $page-1; else echo 1?>" style="cursor:pointer; color:#039" >Prev</a>
             <input type="text" value="<?php if(!isset($_GET['page'])) echo 1; else echo $page;?>"  style=" margin-left:10px; margin-right:5px;text-align:center;width:20px; height:20px; font-size:12px" onkeypress="phantrang(this,event)"/><span>  / </span><?php 
 										
 										
 										echo $totalpage;
 			
-			?></span> <a href="don_da_giao.php? page=<?php if($page<$totalpage) echo $page+1; else echo $totalpage; ?>"  style="cursor:pointer; color:#039">Next</a></div>
-            	<table cellspacing="0" width="100%"  style="outline:thin #FFF7E6 solid" >
+			?></span> <a href="don_da_giao.php? page=<?php if($page<$totalpage) echo $page+1; else echo $totalpage; ?>"  style="cursor:pointer; color:#039">Next</a>
+            
+                <a href="/admin/xuatexceldagiao.php" style="float: right;  margin-bottom: 5px;"><img src="image/excel-xls-icon.png" alt="Xuất excel" title="Xuất excel" width="30" height="30" /></a>
+            </div>
+            	<table cellspacing="0" width="100%"  style="outline:thin #FFF7E6 solid; margin: 10px 0" >
                  <th width="2%"></th>
                 
 <th width="7%">Họ tên</th>

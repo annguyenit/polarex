@@ -1,8 +1,10 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Năm nay sài gòn có tuyết rơi</title>
+<meta name="description" content="“TP.Hồ Chí Minh năm nay có tuyết rơi rồi!”. Đây sẽ là một tin vui vô cùng thú vị của người dân thành phố, với Chương trình triển lãm “Bão Băng Tuyết vùng cực địa – sinh thái Nam Bắc Cực” lần đầu tiên xuất hiện tại Việt Nam trong năm 2016, Triển lãm này đã được tổ chức cực kỳ thành công tại Đài Loan trong 4 năm qua dưới sự đầu tư chính của công ty Digi-Choice Culture Group (Đài Loan). Với kinh nghiệm tổ chức cùng với sự mới lạ của chương trình, chúng tôi cam kết sẽ đem đến cho bạn một “Cơn bão Tuyết” thật sự để xua tan những ngày Hè oi bức !">
+<meta name="keywords" content="băng đăng, saigon polar expo,triễn lãm, tuyết, khu vui chơi giải trí, địa điểm tham quan, tuyết rơi,mát lạnh, điểm tham quan thú vị, quận 7,Số 02 – 04 Đường 09, Khu đô thị HimLam, P. Tân Hưng, Quận 7, Tp.Hồ Chí Minh, cổng vietopia ">
+<title>Saigon Polar Expo chương trình triễn lãm bão băng tuyết vùng cực địa</title>
 <link href="page.css" type="text/css" rel="stylesheet" />
 <link type="image/x-icon" href="pic/logo.ico" rel="shortcut icon" />
 <link rel="stylesheet" href="FlexSlider/flexslider.css" type="text/css" media="screen" />
@@ -232,20 +234,14 @@ function subtract(object)
          </div>
           <div id="daily" style="display:none;background-color:#9dbde4; padding-left:35px; padding-bottom:20px" ><img src="<?php echo $urldaily.$daily[0];?>"  alt="bao_cuc_dia_bang_dai_ly"/></div>
         <div style="background-color:white; padding-top:30px; padding-bottom:30px; position:relative"> 
-           <div >  <span style="font-size:20px; font-weight:bold; letter-spacing:2px">&nbsp;&nbsp;  Đơn vị tài trợ</span></div>
+           <div >  <span style="font-size:20px; font-weight:bold; letter-spacing:2px;padding:20px;">ĐƠN VỊ TÀI TRỢ</span></div>
           <div>
         
           <table align="center"   cellpadding="30"   style=" border-collapse:collapse" >
           <tr  >
-          <td ><img src="pic/Logo/FFA.png" width="130" height="130" /></td>
-           <td><img src="pic/Logo/FFC.png" width="130" height="130" /></td>
-            <td><img src="pic/Logo/logo_vietopia.png"  width="130" height="130" /></td>
-          </tr>
-           <tr >
-           <td><img src="pic/Logo/vietnam_airlines_logo.png"  width="150" height="100" /></td>
-            <td ><img src="pic/Logo/unnamed.jpg" width="130" height="130"  /></td>
-          </tr>
-          </table>
+          <td ><img src="pic/Logo/logocty2.png" /></td>
+              </tr>
+                  </table>
           
           
           
