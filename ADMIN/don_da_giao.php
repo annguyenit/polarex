@@ -97,7 +97,7 @@ $page=$_GET['page'];
 			
 			?></span> <a href="don_da_giao.php? page=<?php if($page<$totalpage) echo $page+1; else echo $totalpage; ?>"  style="cursor:pointer; color:#039">Next</a>
             
-                <a href="/admin/xuatexceldagiao.php" style="float: right;  margin-bottom: 5px;"><img src="image/excel-xls-icon.png" alt="Xuất excel" title="Xuất excel" width="30" height="30" /></a>
+                <a href="/ADMIN/xuatexceldagiao.php" style="float: right;  margin-bottom: 5px;"><img src="image/excel-xls-icon.png" alt="Xuất excel" title="Xuất excel" width="30" height="30" /></a>
             </div>
             	<table cellspacing="0" width="100%"  style="outline:thin #FFF7E6 solid; margin: 10px 0" >
                  <th width="2%"></th>

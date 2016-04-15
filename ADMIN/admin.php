@@ -40,7 +40,7 @@ include_once('Connection.php');
                 include_once("inbox_info_user.php");
             ?>
             <div style=" position:relative; margin-top:10px; padding-top:10px; padding-left:10px; padding-right:10px; padding-bottom:10px; background-color:#FFF; font-weight:bold; font-size:14px">
-                <a href="/admin/xuatexcelchuagiao.php" style="float: right;  margin-bottom: 5px;"><img src="image/excel-xls-icon.png" alt="Xuất excel" title="Xuất excel" width="30" height="30" /></a>
+                <a href="/ADMIN/xuatexcelchuagiao.php" style="float: right;  margin-bottom: 5px;"><img src="image/excel-xls-icon.png" alt="Xuất excel" title="Xuất excel" width="30" height="30" /></a>
                 <table cellspacing="0" width="100%"  style="outline:thin #FFF7E6 solid;" >
                     <th width="2%"></th>
                     <th width="7%">Họ tên</th>
