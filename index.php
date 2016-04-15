@@ -81,6 +81,28 @@ $(document).ready(function(){
         $("#daily").slideToggle("slow");
     });
     
+    $('.show-less-content').css('display','block');
+    $('.read-more-content').css('display','none');
+    
+    $('.show-less').css('display','none');
+    // Set up the toggle.
+    $('.show-more').on('click', function() {
+      $('.read-more-content').css('display','block');
+      $('.show-less-content').css('display','none');
+      
+      $('.show-more').css('display','none');
+      $('.show-less').css('display','block');
+    });
+    
+    // Set up the toggle.
+    $('.show-less').on('click', function() {
+      $('.read-more-content').css('display','none');
+      $('.show-less-content').css('display','block');
+      
+      $('.show-more').css('display','inline');
+      $('.show-less').css('display','none');
+    });
+    
     $("img").hover(function(){
         $(this).next().fadeIn();
         }
@@ -181,15 +203,27 @@ function subtract(object)
         <table style="border:none" >
             <tr><td valign="top" width="565" ><iframe width="560" height="315" src="https://www.youtube.com/embed/4zqf_LW9OnU" frameborder="0" allowfullscreen></iframe></td>
             <td width="427"  style="vertical-align:text-top; font-size:14px">
-                <p>
-                    “TP.Hồ Chí Minh năm nay có tuyết rơi rồi!”. Đây sẽ là một tin vui vô cùng thú vị của người dân thành phố, với <b>Chương trình triển lãm “Bão Băng Tuyết vùng cực địa – sinh thái Nam Bắc Cực”</b> lần đầu tiên xuất hiện tại Việt Nam trong năm 2016, Triển lãm này đã được tổ chức cực kỳ thành công tại Đài Loan trong 4 năm qua dưới sự đầu tư chính của công ty Digi-Choice Culture Group (Đài Loan). Với kinh nghiệm tổ chức cùng với sự mới lạ của chương trình, chúng tôi cam kết sẽ đem đến cho bạn một <b>“Cơn bão Tuyết”</b> thật sự để xua tan những ngày Hè oi bức !
-                </p>
-                <p>
-                    Cùng với tình trạng Trái Đất ấm dần lên và băng đang tan dần ở Nam – Bắc cực, sự kiện này sẽ góp phần nâng cao nhận thức về trách nhiệm bảo vệ môi trường – “sự sống của nhân loại”. Bên cạnh đó với không gian băng tuyết của triển lãm, bạn sẽ có cơ hội nhìn thấy mô hình các loài sinh vật tại 2 vùng cực địa Trái Đất, mô hình nhà băng của người Eskimo, mô hình xe ngựa quả bí pha lê, mô hình hồ cầu nguyện Mỹ Nhân Ngư,…
-                </p>
-                <p>
-                    Khi tham gia chương trình vô cùng hấp dẫn này, các bạn sẽ được mặc áo khoác chống lạnh vàthưởng thức các trò chơi trong phong cảnh tuyệt mỹ nơi cực địa lên đến 1500m2 với nhiệt độ xuống tới - 15oC
-                </p>
+                <div class="show-less-content">
+                    <p>
+                        “TP.Hồ Chí Minh năm nay có tuyết rơi rồi!”. Đây sẽ là một tin vui vô cùng thú vị của người dân thành phố, với <b>Chương trình triển lãm “Bão Băng Tuyết vùng cực địa – sinh thái Nam Bắc Cực”</b> lần đầu tiên xuất hiện tại Việt Nam trong năm 2016, Triển lãm này đã được tổ chức cực kỳ thành công tại Đài Loan trong 4 năm qua dưới sự đầu tư chính của công ty Digi-Choice Culture Group (Đài Loan). Với kinh nghiệm tổ chức cùng với sự mới lạ của chương trình, chúng tôi cam kết sẽ đem đến cho bạn một <b>“Cơn bão Tuyết”</b> thật sự để xua tan những ngày Hè oi bức !
+                    </p>
+                    <p>
+                        Cùng với tình trạng Trái Đất ấm dần lên và băng đang tan dần ở Nam – Bắc cực, sự kiện này sẽ góp phần nâng cao nhận thức về trách nhiệm bảo vệ môi trường – “sự sống của nhân loại”. Bên cạnh đó với không gian băng tuyết của triển lãm, bạn sẽ có cơ hội nhìn thấy mô hình các loài sinh vật tại 2 vùng cực địa Trái Đất, mô hình nhà băng của người Eskimo … <a class="show-more" style="cursor: pointer; color: blue;">Đọc thêm >></a>
+                    </p>
+                </div>
+                
+                <div class="read-more-content">
+                    <p>
+                        “TP.Hồ Chí Minh năm nay có tuyết rơi rồi!”. Đây sẽ là một tin vui vô cùng thú vị của người dân thành phố, với <b>Chương trình triển lãm “Bão Băng Tuyết vùng cực địa – sinh thái Nam Bắc Cực”</b> lần đầu tiên xuất hiện tại Việt Nam trong năm 2016, Triển lãm này đã được tổ chức cực kỳ thành công tại Đài Loan trong 4 năm qua dưới sự đầu tư chính của công ty Digi-Choice Culture Group (Đài Loan). Với kinh nghiệm tổ chức cùng với sự mới lạ của chương trình, chúng tôi cam kết sẽ đem đến cho bạn một <b>“Cơn bão Tuyết”</b> thật sự để xua tan những ngày Hè oi bức !
+                    </p>
+                    <p>
+                        Cùng với tình trạng Trái Đất ấm dần lên và băng đang tan dần ở Nam – Bắc cực, sự kiện này sẽ góp phần nâng cao nhận thức về trách nhiệm bảo vệ môi trường – “sự sống của nhân loại”. Bên cạnh đó với không gian băng tuyết của triển lãm, bạn sẽ có cơ hội nhìn thấy mô hình các loài sinh vật tại 2 vùng cực địa Trái Đất, mô hình nhà băng của người Eskimo, mô hình xe ngựa quả bí pha lê, mô hình hồ cầu nguyện Mỹ Nhân Ngư,…
+                    </p>
+                    <p>
+                        Khi tham gia chương trình vô cùng hấp dẫn này, các bạn sẽ được mặc áo khoác chống lạnh vàthưởng thức các trò chơi trong phong cảnh tuyệt mỹ nơi cực địa lên đến 1500m2 với nhiệt độ xuống tới - 15oC
+                    </p>
+                    <a class="show-less" style="cursor: pointer; color: blue; margin: 10px 0;"><< Thu lại</a>
+                </div>
             </td>
             </tr>
         
