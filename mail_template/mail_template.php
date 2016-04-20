@@ -40,11 +40,11 @@
                                         Cảm ơn quý khách <?php echo $hoten; ?> đã đặt hàng tại saigonpolarexpo.com.vn,</h1>
 
 										<p style="margin:4px 0;font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#444;line-height:18px;font-weight:normal">
-                                        <b>Tân Đạt Thuận</b> rất vui thông báo đơn hàng  <b>#<?php echo $madonhang; ?></b> của quý khách đã được tiếp nhận và đang trong quá trình 
+                                        <b>Tân Đạt Thuận</b> rất vui thông báo đơn hàng  <b>#<?php echo $makhachhang; ?></b> của quý khách đã được tiếp nhận và đang trong quá trình 
 xử lý. <b>Tân Đạt Thuận</b> sẽ thông báo đến quý khách ngay khi hàng chuẩn bị được giao. 
                                     </p>                                   
                                     <h3 style="font-size:13px;font-weight:bold;color:#02acea;text-transform:uppercase;margin:20px 0 0 0;border-bottom:1px solid #ddd">
-                                        Thông tin đơn hàng #<?php echo $madonhang; ?> <span style="font-size:12px;color:#777;text-transform:none;font-weight:normal">(<?php echo $ngaydatve; ?>)</span>
+                                        Thông tin đơn hàng #<?php echo $makhachhang; ?> <span style="font-size:12px;color:#777;text-transform:none;font-weight:normal">(<?php echo $ngaydatve; ?>)</span>
                                     </h3>
                                 </td>
                             </tr>
@@ -95,7 +95,7 @@ xử lý. <b>Tân Đạt Thuận</b> sẽ thông báo đến quý khách ngay kh
                                                         gian giao
                                                         hàng dự
                                                         kiến:</strong>
-                                                                                                        Dự kiến giao hàng sau 2 – 3 ngày làm việc.
+                                                                                                        Dự kiến giao hàng sau 2 – 3 ngày làm việc, không kể Thứ 7 & Chủ Nhật.
                                                                                                         <br>
                                                     <strong>Phí vận chuyển: </strong>
                                                     0.000&nbsp;₫
@@ -129,16 +129,16 @@ xử lý. <b>Tân Đạt Thuận</b> sẽ thông báo đến quý khách ngay kh
 												<td align="left" valign="top" style="padding:3px 9px">
 													<span>Voucher tham quan <?php echo $loaive == 'Ngày thường' ? 'ngày thường' : 'ngày chủ nhật – lễ'; ?></span><br>
 																								</td>
-												<td align="left" valign="top" style="padding:3px 9px"><span><?php echo $giave ?>&nbsp;₫</span></td>
+												<td align="left" valign="top" style="padding:3px 9px"><span><?php echo number_format($giave, 0, ',', '.') ?>&nbsp;₫</span></td>
                                                                                                 <td align="left" valign="top" style="padding:3px 9px"><?php echo $soluongvedat; ?></td>
 												<td align="left" valign="top" style="padding:3px 9px"><span>0&nbsp;₫</span></td>
-												<td align="right" valign="top" style="padding:3px 9px"><span><?php echo $tongtien; ?>&nbsp;₫</span></td>
+												<td align="right" valign="top" style="padding:3px 9px"><span><?php echo number_format($tongtien, 0, ',', '.'); ?>&nbsp;₫</span></td>
 											</tr>
 										</tbody>
                                         <tfoot style="font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#444;line-height:18px">
                                         <tr>
                                             <td colspan="4" align="right" style="padding:5px 9px">Tổng giá trị sản phẩm chưa giảm</td>
-                                            <td align="right" style="padding:5px 9px"><span><?php echo $tongtien; ?>&nbsp;₫</span></td>
+                                            <td align="right" style="padding:5px 9px"><span><?php echo number_format($tongtien, 0, ',', '.'); ?>&nbsp;₫</span></td>
                                         </tr>
 
                                         <tr>
@@ -153,7 +153,7 @@ xử lý. <b>Tân Đạt Thuận</b> sẽ thông báo đến quý khách ngay kh
                                         
                                         <tr bgcolor="#eee">
                                             <td colspan="4" align="right" style="padding:7px 9px"><strong><big>Tổng giá trị đơn hàng</big></strong></td>
-                                            <td align="right" style="padding:7px 9px"><strong><big><span><?php echo $tongtien; ?>&nbsp;₫</span></big></strong></td>
+                                            <td align="right" style="padding:7px 9px"><strong><big><span><?php echo number_format($tongtien, 0, ',', '.'); ?>&nbsp;₫</span></big></strong></td>
                                         </tr>
                                         </tfoot>
                                     </table>
@@ -205,8 +205,8 @@ xử lý. <b>Tân Đạt Thuận</b> sẽ thông báo đến quý khách ngay kh
                 <tbody><tr>
                     <td>
                         <p style="font-family:Arial,Helvetica,sans-serif;font-size:11px;line-height:18px;color:#4b8da5;padding:10px 0;margin:0px;font-weight:normal" align="left">
-                            Quý khách nhận được email này vì đã mua hàng tại saigonpolarexpo.com.<br>
-                            Để chắc chắn luôn nhận được email thông báo, xác nhận mua hàng từ saigonpolarexpo.com, quý khách vui lòng thêm địa chỉ <strong><a href="mailto:saigon.polarexpo@gmail.com" target="_blank">saigon.polarexpo@gmail.com</a></strong> vào số địa chỉ (Address Book, Contacts) của hộp email.<br>
+                            Quý khách nhận được email này vì đã mua hàng tại saigonpolarexpo.com.vn.<br>
+                            Để chắc chắn luôn nhận được email thông báo, xác nhận mua hàng từ saigonpolarexpo.com.vn, quý khách vui lòng thêm địa chỉ <strong><a href="mailto:saigon.polarexpo@gmail.com" target="_blank">saigon.polarexpo@gmail.com</a></strong> vào số địa chỉ (Address Book, Contacts) của hộp email.<br>
                             <b>Văn phòng Tân Đạt Thuận:</b> Số 4 Út Tịch, Phường 4, Quận Tân Bình, Tp.Hô Chí Minh.
                         </p>
                     </td>

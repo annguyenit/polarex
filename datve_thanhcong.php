@@ -13,7 +13,7 @@
 
 <div style="background-color:white; padding-top:100px; padding-bottom:80px">
        
-        <div align="center"><h1>Cám ơn bạn, bạn đã đặt vé thành công !!</h1></div>
+        <div align="center"><h1>Cám ơn bạn, bạn đã đặt vé thành công !! <br /> Saigon Polar Expo đã tiếp nhận đơn hàng  và  gửi thông tin chi tiết đơn hàng đến Email bạn, hãy kiểm tra trong hộp thư Spam</h1></div>
         <div align="center"><h6>sau <span id="time">10 </span> giây page sẽ tự động chuyển</h6></div>
         
         <div style="clear:both"></div>

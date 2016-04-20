@@ -26,12 +26,13 @@ $count = 1;
 while ($row = mysql_fetch_array($result)) {
    $objPHPExcel->setActiveSheetIndex(0)->setCellValue('A' . $count_row, $count++)
             ->setCellValue('B' . $count_row, isset($row['NGAYDATVE']) ? $row['NGAYDATVE'] : '') 
-            ->setCellValue('C' . $count_row, isset($row['USER_TEN']) ? $row['USER_TEN'] : '') 
-            ->setCellValue('D' . $count_row, isset($row['DIACHI']) ? $row['DIACHI'] : '') 
-            ->setCellValueExplicit('E' . $count_row, isset($row['DIENTHOAI']) ? $row['DIENTHOAI'] : '', PHPExcel_Cell_DataType::TYPE_STRING)
-            ->setCellValue('F' . $count_row, isset($row['LOAIVE']) ? $row['LOAIVE'] : '') 
-            ->setCellValue('G' . $count_row, isset($row['SOLUONG']) ? $row['SOLUONG'] : '') 
-            ->setCellValue('H' . $count_row, $row['TINHTRANG'] == 0 ? 'CHƯA THANH TOÁN' : 'ĐÃ THANH TOÁN');
+            ->setCellValue('C' . $count_row, isset($row['USER_EMAIL']) ? $row['USER_EMAIL'] : '') 
+            ->setCellValue('D' . $count_row, isset($row['USER_TEN']) ? $row['USER_TEN'] : '') 
+            ->setCellValue('E' . $count_row, isset($row['DIACHI']) ? $row['DIACHI'] : '') 
+            ->setCellValueExplicit('F' . $count_row, isset($row['DIENTHOAI']) ? $row['DIENTHOAI'] : '', PHPExcel_Cell_DataType::TYPE_STRING)
+            ->setCellValue('G' . $count_row, isset($row['LOAIVE']) ? $row['LOAIVE'] : '') 
+            ->setCellValue('H' . $count_row, isset($row['SOLUONG']) ? $row['SOLUONG'] : '') 
+            ->setCellValue('I' . $count_row, $row['TINHTRANG'] == 0 ? 'CHƯA THANH TOÁN' : 'ĐÃ THANH TOÁN');
    
    $count_row++;
 }

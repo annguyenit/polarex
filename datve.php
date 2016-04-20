@@ -1,4 +1,5 @@
 <?php
+date_default_timezone_set('Asia/Ho_Chi_Minh');
 
 $dondathang=split(',',$_POST['dondathang']);
 $thongtinkhachhang=split(',',$_POST['value']);
@@ -51,7 +52,7 @@ $template->soluongvedat = $dondathang[2];
 $template->giave = $giave;
 $template->loaive = $dondathang[3];
 $template->tongtien = $dondathang[1];
-$template->madonhang = $MADH;
+$template->makhachhang = $MAKH;
 
 $template->ngaydatve = 'Ngày ' . date('d', $ngaydatve) . ' Tháng ' . date('m', $ngaydatve) . ' Năm ' . date('Y', $ngaydatve) . ' '. date('H:i:s', $ngaydatve);
 
