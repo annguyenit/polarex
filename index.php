@@ -1,11 +1,13 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="description" content="“TP.Hồ Chí Minh năm nay có tuyết rơi rồi!”. Đây sẽ là một tin vui vô cùng thú vị của người dân thành phố, với Chương trình triển lãm “Bão Băng Tuyết vùng cực địa – sinh thái Nam Bắc Cực” lần đầu tiên xuất hiện tại Việt Nam trong năm 2016, Triển lãm này đã được tổ chức cực kỳ thành công tại Đài Loan trong 4 năm qua dưới sự đầu tư chính của công ty Digi-Choice Culture Group (Đài Loan). Với kinh nghiệm tổ chức cùng với sự mới lạ của chương trình, chúng tôi cam kết sẽ đem đến cho bạn một “Cơn bão Tuyết” thật sự để xua tan những ngày Hè oi bức !">
 <meta name="keywords" content="băng đăng, saigon polar expo,triễn lãm, tuyết, khu vui chơi giải trí, địa điểm tham quan, tuyết rơi,mát lạnh, điểm tham quan thú vị, quận 7,Số 02 – 04 Đường 09, Khu đô thị HimLam, P. Tân Hưng, Quận 7, Tp.Hồ Chí Minh, cổng vietopia ">
 <title>Saigon Polar Expo chương trình triễn lãm bão băng tuyết vùng cực địa</title>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,300,700,800&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
 <link href="page.css" type="text/css" rel="stylesheet" />
+<link href="pagect.css" type="text/css" rel="stylesheet" />
 <link type="image/x-icon" href="pic/logo.ico" rel="shortcut icon" />
 <link rel="stylesheet" href="FlexSlider/flexslider.css" type="text/css" media="screen" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
