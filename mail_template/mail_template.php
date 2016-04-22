@@ -68,16 +68,15 @@ xử lý. <b>Tân Đạt Thuận</b> sẽ thông báo đến quý khách ngay kh
                                             <td valign="top" style="padding:3px 9px 9px 9px;border-top:0;font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#444;line-height:18px;font-weight:normal">
                                                 <span style="text-transform:capitalize"><?php echo $hoten; ?></span><br>
                                                 <a href="mailto:<?php echo $email; ?>" target="_blank"><?php echo $email; ?></a><br>
-                                                <?php echo $sodienthoai ?>
+                                                <?php echo $diachi; ?><br>
+                                                T: <?php echo $sodienthoai ?>
                                             </td>
 
                                             <td valign="top" style="padding:3px 9px 9px 9px;border-top:0;border-left:0;font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#444;line-height:18px;font-weight:normal">
                                                 <span style="text-transform:capitalize">
                                                 <?php echo $hoten; ?></span><br>
-
-                                                                                                <a href="mailto:<?php echo $email; ?>" target="_blank"><?php echo $email; ?></a><br>
+                                                <a href="mailto:<?php echo $email; ?>" target="_blank"><?php echo $email; ?></a><br>
                                                 <?php echo $diachi; ?><br>
-                                                
                                                 T: <?php echo $sodienthoai ?>
                                             </td>
                                         </tr>
@@ -88,7 +87,7 @@ xử lý. <b>Tân Đạt Thuận</b> sẽ thông báo đến quý khách ngay kh
                                                 <p style="font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#444;line-height:18px;font-weight:normal">
 
                                                     <strong>Phương thức thanh toán: </strong>
-                                                    Thanh toán tiền mặt khi nhận hàng
+                                                    <?php echo $hinhthucthanhtoan; ?>
                                                     <br>
 
                                                                                                         <strong>Thời

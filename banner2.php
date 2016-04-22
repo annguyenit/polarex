@@ -26,7 +26,7 @@
 <?php foreach($banner as $value) {
         echo '<div class="item"><img src="'.$urlbanner.$value;
         $temp=explode('.',$value);
-        echo '" alt="'.$temp[1].'" border="0" /></div>';
+        echo '" alt="'.$temp[0].'" border="0" /></div>';
         }
         ?>
     

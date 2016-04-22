@@ -231,18 +231,38 @@
             }
             function hoantat()
             {
-                var form_object = document.createElement('form');
-                var input_object = document.createElement('input');
-                input_object.value = acc_info_array.toString();
-                input_object.type = 'text';
-                input_object.name = 'value';
-                form_object.method = 'post';
-                form_object.action = 'datve.php';
-                form_object.appendChild(input_object);
-
-
-
-
+                var form_object = document.getElementById('datve');
+                var email = document.createElement('input');
+                var hoten = document.createElement('input');
+                var diachi = document.createElement('input');
+                var thanhpho = document.createElement('input');
+                var dienthoai = document.createElement('input');
+                
+                email.value = acc_info_array[0];
+                email.type = 'text';
+                email.name = 'email';
+                
+                hoten.value = acc_info_array[2];
+                hoten.type = 'text';
+                hoten.name = 'hoten';
+                
+                diachi.value = acc_info_array[3];
+                diachi.type = 'text';
+                diachi.name = 'diachi';
+                
+                thanhpho.value = acc_info_array[4];
+                thanhpho.type = 'text';
+                thanhpho.name = 'thanhpho';
+                
+                dienthoai.value = acc_info_array[5];
+                dienthoai.type = 'text';
+                dienthoai.name = 'dienthoai';
+                
+                form_object.appendChild(email);
+                form_object.appendChild(hoten);
+                form_object.appendChild(diachi);
+                form_object.appendChild(thanhpho);
+                form_object.appendChild(dienthoai);
 
                 var i = 0;
                 var slvedat = 0;

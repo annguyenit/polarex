@@ -195,7 +195,7 @@ $connect->Connect2DB();
 		<li><a href="#datVe">ĐẶT VÉ</a></li>
         <li><a href="#gioiThieu">GIỚI THIỆU</a></li>
         <li><a href="#thuVienAnh">THƯ VIỆN ẢNH</a></li>
-        <li><a href="#lienHe">DANH SÁCH ĐẠI LÝ</a></li>
+        <li><a href="#daily">DANH SÁCH ĐẠI LÝ</a></li>
         <li><a href="#lienHe">LIÊN HỆ</a></li>
       </ul>
     </div>
@@ -239,7 +239,7 @@ $connect->Connect2DB();
 	
 </div>
 -->
-<?php include_once('chonve2.php')?>
+<?php include_once('chonve3.php')?>
 
 <div id="giaVe" class="container-fluid" align="center">
 		<img src="<?php echo $urlgiave.$giave[0];?>"  alt="bao_cuc_dia_bang_gia_ve" class="img-responsive"/>
@@ -372,14 +372,14 @@ $connect->Connect2DB();
 <!--end thu vien anh-->
 
 <!--Lien He-->
-<div id="lienHe" class="container-fluid daily" align="center">
+<div id="daily" class="container-fluid daily" align="center">
 
 		<img src="<?php echo $urldaily.$daily[0];?>"  alt="bao_cuc_dia_bang_dai_ly" class="img-responsive"/>
 
 </div>
 
 <!--To Top-->
-<footer class="text-center">
+<footer class="text-center container-fluid" id="lienhe">
   <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="Trở về đầu trang">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a><br><br>

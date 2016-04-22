@@ -52,7 +52,8 @@ $result= $connect->ExecuteDB('select * from tinhthanh');
 
 function dangky_dangnhap_thanhtoan()
 {
-	echo '<div style="float:left; margin-left:40px">
+	echo '<form id="datve" name="datve" method="POST" action="datve.php">
+            <div style="float:left; margin-left:40px">
    	 <table  style="border:#e4e8ea solid 1.5px; padding-bottom:80px" cellpadding="0" cellspacing="0"><tr><td>
 <table width="550" style="vertical-align:top">
             	<tr >
@@ -77,7 +78,7 @@ function dangky_dangnhap_thanhtoan()
   <tr><td style="font-size:14px" height="23">Điện thoại di động: <span id="dienthoaispan"></span></td></tr>
   <tr><td>&nbsp;</td></tr>
   </table>
-  </div>';
+  </div></form>';
 }
 
 ?>
