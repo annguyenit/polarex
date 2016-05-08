@@ -2,9 +2,9 @@
     <form action="dangky_dangnhap_.php" method="post" class="form-inline" role="form" align="center">
         <div class="col-sm-4">
             <div class="form-group">
-                <input style="text-align: center;" class="form-control" id="nguoilon" name="nguoilon" type="text" value="Nhập số vé" onblur="if (this.value == '') {
-                            this.value = 'Nhập số vé'
-                        }" onfocus="if (this.value == 'Nhập số vé')
+                <input style="text-align: center;" class="form-control" id="nguoilon" name="nguoilon" type="text" value="Nhập số lượng vé" onblur="if (this.value == '') {
+                            this.value = 'Nhập số lượng vé'
+                        }" onfocus="if (this.value == 'Nhập số lượng vé')
                                     this.value = '';"/>
             </div>
         </div>

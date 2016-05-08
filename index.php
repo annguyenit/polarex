@@ -196,7 +196,7 @@ $connect->Connect2DB();
         <li><a href="#gioiThieu">GIỚI THIỆU</a></li>
         <li><a href="#thuVienAnh">THƯ VIỆN ẢNH</a></li>
         <li><a href="#daily">DANH SÁCH ĐẠI LÝ</a></li>
-        <li><a href="#lienHe">LIÊN HỆ</a></li>
+        <li><a href="#lienhe">LIÊN HỆ</a></li>
       </ul>
     </div>
   </div>
@@ -263,7 +263,7 @@ $connect->Connect2DB();
 	<!--video-->
 	
 	<div class="embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item introduce" src="https://www.youtube.com/embed/4zqf_LW9OnU"></iframe>
+    <iframe class="embed-responsive-item introduce" src="https://www.youtube.com/embed/DRAj8MPdhWA"></iframe>
 	</div>
 
 </div>
@@ -387,7 +387,7 @@ $connect->Connect2DB();
     <div>
         <p align="center">Công ty TNHH MTV Dịch Vụ và Tư Vấn Tân Đạt Thuận - Đơn vị phân phối vé trực tiếp Triển lãm Saigon Polar Expo.</p>
         <p align="center">Địa chỉ văn phòng: Số 4, Út Tịch, Phường 4, Quận Tân Bình, Tp.Hồ Chí Minh - Số điện thoại: (08)6654 6410 - (08)6654 6412 - (08)6654 6413 </p>
-        <p align="center">Liên hệ đặt đoàn, đại lý: 0984.126.333 ( Mr.Khánh)  - 01664.318.529 ( Mr.Bảo) – 0908.616.990 (Ms. Hương) – 0902.083.018 (Mr.Màng)</p>
+        <p align="center">Liên hệ đặt đoàn, đại lý: 0984.126.333 ( Mr.Khánh)  - 01664.318.529 ( Mr.Bảo) – 0908.616.990 (Ms. Hương)</p>
     </div>
 	
 	<div align="center">

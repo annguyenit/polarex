@@ -31,7 +31,7 @@ $result= $connect->ExecuteDB('select * from tinhthanh');
                 	<td width="235"  align="right" ><b>Họ tên</b></td>
                 	<td width="289" height="35"><input type="text" placeholder="Họ và tên" id="hoten" name="acc_info"  /></td>
                   </tr>
-                  <tr ><td align="right"><b>Địa chỉ giao hàng (Số nhà , Đường)</b></td><td height="24"><input style="height:40px" type="text" placeholder="Địa chỉ giao hàng (Số nhà , Đường) " id="diachi" name="acc_info" /></td></tr>
+                  <tr ><td align="right"><b>Địa chỉ giao hàng</b></td><td height="24"><input style="height:40px" type="text" placeholder="Số nhà , Đường , Phường/Xã , Quận/Huyện) " id="diachi" name="acc_info" /></td></tr>
                    <tr><td align="right"><b>Tỉnh/Thành phố</b></td><td height="44"> <select id="thanhpho" name="acc_info"  >';
 				    while($rows=mysql_fetch_array($result))
 				     { echo    '<option value="'.$rows[1].'">'.$rows[1].'</option>';
@@ -62,7 +62,28 @@ function dangky_dangnhap_thanhtoan()
                		 <td height="35"><input type="radio"  name="thanhtoan" checked="checked" value="tr"/><span style="padding-left:10px">Thanh toán trực tiếp	</span>	 </td>
           </tr>
                  <tr>
-               		 <td height="35"><input type="radio"  name="thanhtoan" value="gt"/><span style="padding-left:10px">Thanh toán qua ngân lượng		 </span></td>
+               		 <td height="35"><input type="radio"  name="thanhtoan" value="gt"/><span style="padding-left:10px">Thanh toán qua tài khoản ngân hàng</span></td>
+                 </tr>
+				  <tr>
+<td>
+					<p>	Quý khách vui lòng chuyển tiền theo nội dung sau :</p>
+
+<p>Chủ tài khoản: Châu Vĩ Khánh</p>
+
+<p>Ngân hàng TMCP Á Châu ( ACB)</p>
+
+<p>Số Tài khoản: 215281459</p>
+
+<p>Mở tại: PGD Maximark Cộng Hòa</p>
+
+<p>Khi thanh toán, bạn vui lòng ghi nội dung: Hoten_SDT_đặt vé thường hoặc lễ</p>
+
+<p>Sau khi thanh toán tiền sản phẩm, quý khách vui lòng nhắn tin cho Email: </p>
+
+<p style="color:red">saigon.polarexpo@gmail.com </p>
+
+<p>hoặc nhắn tin FB:<span style="color:green"><a href="https://www.facebook.com/SaigonPolarExpo" target="_blank">https://www.facebook.com/SaigonPolarExpo</a></span> với nội dung<span style="color:green">  HọTên/SDT_địa chỉ nhận hàng_loại vé_số vé</span></p>
+					 </td>
                  </tr>
                    <tr><td height="48" >&nbsp;</td></tr>
         </table>
@@ -70,7 +91,7 @@ function dangky_dangnhap_thanhtoan()
         </div>
   <div style="float:right; margin-right:40px; padding-bottom:16px" > 
   <table  style="width:350px; text-indent:10px" cellpadding="0" cellspacing="0" class="thongtin_donhang">
-   <tr  ><td height="53"  style=" border-bottom: solid thin #e4e8ea"><b>Địa chỉ giao hàng <span style="color:#65bcce; font-size:11px; cursor:pointer">Chỉnh sửa</span></b></td></tr>
+   <tr  ><td height="53"  style=" border-bottom: solid thin #e4e8ea"><b>Địa chỉ giao hàng</b></td></tr>
   <tr><td height="35" style="font-size:14px">Họ và tên: <b><span id="tenkhachhangspan"></span></b></td></tr>
   <tr><td height="24" style="font-size:14px">Email: <span id="emailspan"></span></td></tr>
   <tr><td height="24" style="font-size:14px">Địa chỉ giao hàng: <span id="diachispan"></span></td></tr>

@@ -23,11 +23,19 @@
 <img src="<?php echo $urlbanner.$banner[0];?>" />
 </div>   
 
-<?php foreach($banner as $value) {
+<?php /*foreach($banner as $value) {
         echo '<div class="item"><img src="'.$urlbanner.$value;
         $temp=explode('.',$value);
         echo '" alt="'.$temp[0].'" border="0" /></div>';
-        }
+        }*/
+		$num_banner=1;
+		while($banner[$num_banner])
+		{
+			echo '<div class="item"><img src="'.$urlbanner.$banner[$num_banner];
+			 $temp=explode('.',$banner[$num_banner]);
+             echo '" alt="'.$temp[0].'" border="0" /></div>';
+			 $num_banner++;
+		}
         ?>
     
    

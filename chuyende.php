@@ -1,13 +1,22 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>Năm nay sài gòn có tuyết rơi</title>
-        <link href="page.css" type="text/css" rel="stylesheet" />
-        <link type="image/x-icon" href="pic/logo.ico" rel="shortcut icon" />
-        <link rel="stylesheet" href="FlexSlider/flexslider.css" type="text/css" media="screen" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-        <script defer src="FlexSlider/jquery.flexslider.js"></script>
+
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<title>Năm nay sài gòn có tuyết rơi</title>
+<link type="image/x-icon" href="pic/logo.ico" rel="shortcut icon" />
+  <meta charset="utf-8">
+  <meta name="description" content="“TP.Hồ Chí Minh năm nay có tuyết rơi rồi!”. Đây sẽ là một tin vui vô cùng thú vị của người dân thành phố, với Chương trình triển lãm “Bão Băng Tuyết vùng cực địa – sinh thái Nam Bắc Cực” lần đầu tiên xuất hiện tại Việt Nam trong năm 2016, Triển lãm này đã được tổ chức cực kỳ thành công tại Đài Loan trong 4 năm qua dưới sự đầu tư chính của công ty Digi-Choice Culture Group (Đài Loan). Với kinh nghiệm tổ chức cùng với sự mới lạ của chương trình, chúng tôi cam kết sẽ đem đến cho bạn một “Cơn bão Tuyết” thật sự để xua tan những ngày Hè oi bức !">
+<meta name="keywords" content="băng đăng, saigon polar expo,triễn lãm, tuyết, khu vui chơi giải trí, địa điểm tham quan, tuyết rơi,mát lạnh, điểm tham quan thú vị, quận 7,Số 02 – 04 Đường 09, Khu đô thị HimLam, P. Tân Hưng, Quận 7, Tp.Hồ Chí Minh, cổng vietopia ">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+     <script defer src="FlexSlider/jquery.flexslider.js"></script>
+	 <link rel="stylesheet" href="FlexSlider/flexslider.css" type="text/css" media="screen" />
+	 
+
+   
 
     </head>
 
@@ -198,10 +207,10 @@
 
         </script>
         <?php include_once('header.html') ?>
-        <?php include_once('banner.php')?>
+        <?php include_once('banner2.php')?>
 
         <div style="background-color:#b6cdec; padding-top:5px"> 
-            <?php include_once('chonve.php')?>
+            <?php include_once('chonve2.php')?>
             <div style="background-color:#9dbde4; padding: 20px;">
                 
                 <h3><?php echo isset($chude['TEN']) ? $chude['TEN'] : '' ?></h3>

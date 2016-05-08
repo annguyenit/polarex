@@ -239,23 +239,23 @@
                 var dienthoai = document.createElement('input');
                 
                 email.value = acc_info_array[0];
-                email.type = 'text';
+                email.type = 'hidden';
                 email.name = 'email';
                 
                 hoten.value = acc_info_array[2];
-                hoten.type = 'text';
+                hoten.type = 'hidden';
                 hoten.name = 'hoten';
                 
                 diachi.value = acc_info_array[3];
-                diachi.type = 'text';
+                diachi.type = 'hidden';
                 diachi.name = 'diachi';
                 
                 thanhpho.value = acc_info_array[4];
-                thanhpho.type = 'text';
+                thanhpho.type = 'hidden';
                 thanhpho.name = 'thanhpho';
                 
                 dienthoai.value = acc_info_array[5];
-                dienthoai.type = 'text';
+                dienthoai.type = 'hidden';
                 dienthoai.name = 'dienthoai';
                 
                 form_object.appendChild(email);
@@ -283,7 +283,7 @@
 
                 var don_dat_hang = document.createElement('input');
                 don_dat_hang.value = diengiai + ',' + thanhtien + ',' + slvedat + ',' + datve_array[0][3];
-                don_dat_hang.type = 'text';
+                don_dat_hang.type = 'hidden';
                 don_dat_hang.name = 'dondathang';
                 form_object.appendChild(don_dat_hang);
                 //alert(datve_array);
